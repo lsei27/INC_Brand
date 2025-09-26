@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IN CATERING - Brand One-Pager</title>
+    <style>
+        @import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Satoshi', sans-serif;
+            background: #090909;
+            color: #FFFFFF;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 0;
+        }
+
+        .logo {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #CCCCCC;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: rgba(28, 28, 28, 0.8);
+            border: 1px solid rgba(229, 49, 55, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #E53137;
+            box-shadow: 0 10px 30px rgba(229, 49, 55, 0.2);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .card-content h4 {
+            color: #FFFFFF;
+            margin: 15px 0 8px 0;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .card-content p, .card-content li {
+            color: #E0E0E0;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .card-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card-content li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+
+        .card-content li:before {
+            content: "▶";
+            color: #E53137;
+            font-size: 0.8rem;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        .highlight {
+            background: linear-gradient(90deg, rgba(229, 49, 55, 0.2) 0%, transparent 100%);
+            padding: 15px;
+            border-left: 4px solid #E53137;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight strong {
+            color: #E53137;
+        }
+
+        .one-liner {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #FFFFFF 0%, rgba(255, 255, 255, 0.8) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 40px 0;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .pillar {
+            background: rgba(229, 49, 55, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(229, 49, 55, 0.3);
+        }
+
+        .pillar-number {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #E53137;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .do-dont {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .do-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .dont-section {
+            background: rgba(229, 49, 55, 0.1);
+            border: 1px solid rgba(229, 49, 55, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .do-section h4 {
+            color: #FFFFFF;
+        }
+
+        .dont-section h4 {
+            color: #E53137;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .motto {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        .hashtag {
+            font-size: 1.2rem;
+            color: #CCCCCC;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            background: rgba(28, 28, 28, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: #E53137;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .logo-title {
+                font-size: 2.5rem;
+            }
+
+            .one-liner {
+                font-size: 1.5rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .do-dont {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="https://cdn.prod.website-files.com/683548bebd66499a4ba7c0e5/6839b05d9abc5c5378aa2f74_INCatering_logo.svg" alt="IN CATERING" class="logo">
+            <p class="subtitle">Brand One-Pager - Interní Brand Manual</p>
+        </header>
+
+        <div class="one-liner">
+            "Tvoříme výjimečné zážitky a chutě."
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2 class="card-title">1) Základ značky</h2>
+                <div class="card-content">
+                    <h4>Účel</h4>
+                    <p>Proměňujeme společenské akce ve výjimečné momenty – precizní servis, gastronomie a detaily, které dělají radost hostům i organizátorům.</p>
+
+                    <h4>Pozicioning</h4>
+                    <p>Prémiový, profesionální eventový catering; spolehlivý partner s vysokou kreativitou, důrazem na detail a bezchybnou exekucí.</p>
+
+                    <div class="highlight">
+                        <strong>Odlišení:</strong> signature koncept propojující špičkovou gastronomii, design a plynulý servis.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">2) Mission, Vision & Pilíře</h2>
+                <div class="card-content">
+                    <h4>Mission</h4>
+                    <p>Jsme partner, ne jen dodavatel. Kreativita, inovace, inspirace. Nic není nemožné.</p>
+
+                    <h4>Vision</h4>
+                    <p>Zážitky a chutě, na které se nezapomíná. Catering není jen o jídle, je to zážitek.</p>
+
+                    <h4>Pilíře</h4>
+                    <div class="pillars">
+                        <div class="pillar">
+                            <span class="pillar-number">1</span>
+                            Kvalita bez kompromisu
+                        </div>
+                        <div class="pillar">
+                            <span class="pillar-number">2</span>
+                            Zážitek
+                        </div>
+                        <div class="pillar">
+                            <span class="pillar-number">3</span>
+                            Udržitelnost s rozumem
+                        </div>
+                        <div class="pillar">
+                            <span class="pillar-number">4</span>
+                            Partnerství a spolehlivost
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">3) Tón a styl komunikace</h2>
+                <div class="card-content">
+                    <h4>Tón</h4>
+                    <p>Přátelská moderní pozitivní komunikace: profesionální, ale lidská. Partnerství s klientem. Odborná jistota: mluvíme přesně, bez zbytečných superlativů. Krátké věty, konkrétnost, jasná struktura.</p>
+
+                    <div class="do-dont">
+                        <div class="do-section">
+                            <h4>✓ DO</h4>
+                            <ul>
+                                <li>Konkrétní příklady/čísla/kroky</li>
+                                <li>Konzistentní terminologie</li>
+                                <li>CTA s jasným užitkem</li>
+                            </ul>
+                        </div>
+                        <div class="dont-section">
+                            <h4>✗ DON'T</h4>
+                            <ul>
+                                <li>Prázdné superlativy</li>
+                                <li>Klišé a těžkopádná souvětí</li>
+                                <li>Nejasný interní žargon</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">4) Značková architektura</h2>
+                <div class="card-content">
+                    <h4>Master brand</h4>
+                    <p>IN CATERING je hlavní značka a odesílatel.</p>
+
+                    <h4>Endorsement</h4>
+                    <p>„Součástí rodiny IN CATERING Group" – pouze tam, kde zvyšuje důvěryhodnost; vždy sekundární; max. výška = výška písmene „N".</p>
+
+                    <h4>Co-branding pravidla</h4>
+                    <ul>
+                        <li>Vlevo IN CATERING, vpravo partner</li>
+                        <li>Výška loga partnera max. výška „N"</li>
+                        <li>Mezi logy min. 1× ochranná zóna</li>
+                        <li>Vždy zachovat čitelnost a kontrast</li>
+                    </ul>
+
+                    <div class="highlight">
+                        <strong>Zákazy:</strong> netvořit nové lockupy bez schválení; nedeformovat logo, neměnit barvy, neporušovat ochrannou zónu.
+                    </div>
+
+                    <h4>Poznámka k vizuálu</h4>
+                    <p>Typografie, barvy, ochranné zóny loga a fotostyl jsou definovány v <a href="https://drive.google.com/file/d/1W4qbpZaQY5sZICso9lbgnkBDCkP16bM7/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="color: #E53137; text-decoration: none;">Grafickém manuálu</a>.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">5) Aplikace obsahu</h2>
+                <div class="card-content">
+                    <h4>Case study šablona (1 str.)</h4>
+                    <p>Kontext → Řešení → Výsledek (metriky, citace) → Galerie (3–6 fotek) → CTA</p>
+
+                    <h4>LinkedIn (B2B)</h4>
+                    <p>Problém → řešení → výsledek; 1–2 odstavce + 3–5 odrážek; čísla, jasné CTA</p>
+
+                    <h4>Newsletter</h4>
+                    <p>Hero titulek; 2–3 krátké bloky s obrázky; 1 hlavní CTA; alt-texty, kontrast pro dark-mode</p>
+
+                    <h4>Re-use strategie</h4>
+                    <p>Z jedné case study → 1 LI post, 1 newsletter blok, 3 vizuály, web snippet</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">6) Hashtag & Motto</h2>
+                <div class="card-content">
+                    <div class="highlight">
+                        <strong>Hashtag:</strong> #myjsmecatering, #MYJSMECATERING<br>
+                        <em>(používat konzistentně)</em>
+                    </div>
+                    <div class="highlight">
+                        <strong>Motto:</strong> „Milujeme jídlo - We love food."
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">7) Compliance checklist</h2>
+                <div class="card-content">
+                    <h4>Tvrzení a schválení</h4>
+                    <ul>
+                        <li>Tvrzení jsou ověřitelné a schválené</li>
+                        <li>ESG tvrzení podložená praxí</li>
+                    </ul>
+
+                    <h4>Souhlasy</h4>
+                    <ul>
+                        <li>Klient (název, vizuály)</li>
+                        <li>Citace schválené e-mailem</li>
+                        <li>GDPR/model release u rozpoznatelných osob</li>
+                    </ul>
+
+                    <h4>Licence</h4>
+                    <ul>
+                        <li>Foto/video s komerční licencí</li>
+                        <li>Kredity dle smluv</li>
+                        <li>Citlivá data anonymizovat</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">8) Firemní kultura v praxi</h2>
+                <div class="card-content">
+                    <h4>Hodnoty navenek</h4>
+                    <ul>
+                        <li>Profesionalita, spolehlivost a respekt ke klientům a hostům</li>
+                        <li>Řemeslo a detail</li>
+                        <li>Odpovědnost</li>
+                        <li>Efektivita napříč firmou</li>
+                    </ul>
+
+                    <h4>Měřítka úspěchu</h4>
+                    <ul>
+                        <li>Vysoké hodnocení hostů (NPS)</li>
+                        <li>Minimum reklamací</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">9) Governance</h2>
+                <div class="card-content">
+                    <h4>Schvalování materiálů</h4>
+                    <p>Claimy a publikace: marketing/vedení dle procesu</p>
+
+                    <div class="contact-info">
+                        <strong>Kontakt pro poptávky:</strong><br>
+                        <a href="mailto:sales@incatering.cz">sales@incatering.cz</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="highlight" style="text-align: center; margin: 60px auto; max-width: 600px;">
+            <strong>Tento one-pager slouží jako strategické a obsahové minimum. Kompletní brand manuál najdete <a href="https://round-cowl-1b3.notion.site/755b23c2f24b4074b6f67b787ab3c9a9?v=670100ecf4b34485bbbf9fcc30b5540f" target="_blank" rel="noopener noreferrer" style="color: #E53137; text-decoration: underline;">zde</a>.</strong>
+        </div>
+
+        <footer class="footer">
+            <div class="motto">„Milujeme jídlo - We love food."</div>
+            <div class="hashtag">#myjsmecatering</div>
+        </footer>
+    </div>
+</body>
+</html>
